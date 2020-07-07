@@ -16,5 +16,13 @@ namespace TestDemoGym.Pages
         {
 
         }
+        public IActionResult OnPost()
+        {
+            if (ModelState.IsValid == false)
+            {
+                return Page();
+            }
+            return RedirectToPage("./Index");
+        }
     }
 }
