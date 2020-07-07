@@ -1,0 +1,15 @@
+﻿@page
+@model TestDemoGym.Pages.AddExerciseModel
+@{
+    ViewData["Title"] = "AddExercise";
+}
+
+<h1>Add Address</h1>
+@*means it will be sent as a post*@
+<form method="post">
+    <input type="text" asp-for="address.StreetAddress" placeholder="Street Address" />
+    <input type="text" asp-for="address.City" placeholder="City" />
+    <input type="text" asp-for="address.state" placeholder="State" />
+    <input type="text" asp-for="address.Zip" placeholder="Zip" />
+
+</form>

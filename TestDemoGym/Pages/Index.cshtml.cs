@@ -17,7 +17,16 @@ namespace TestDemoGym.Pages
             _logger = logger;
         }
 
+        [BindProperty(SupportsGet = true)]
+        public string name{ get; set; }
         public void OnGet()
+        {
+            if (string.IsNullOrWhiteSpace(name)) 
+            {
+                name = "user";
+            }
+        }
+        public void OnPost()
         {
 
         }
