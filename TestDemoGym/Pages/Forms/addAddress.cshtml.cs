@@ -22,7 +22,7 @@ namespace TestDemoGym.Pages
             {
                 return Page();
             }
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Index", new { name = address.City  } );
         }
     }
 }
