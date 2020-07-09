@@ -14,6 +14,5 @@ namespace GymLibraryData.DataModels
         public string Phone { get; set; }
         public Program Program { get; set; }
 
-        //public virtual GymCard gymCard { get; set; }
     }
 }
