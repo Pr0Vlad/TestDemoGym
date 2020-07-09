@@ -7,7 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyModel;
 using Microsoft.Extensions.Hosting;
+using GymLibraryData;
+using Microsoft.EntityFrameworkCore;
 
 namespace TestDemoGym
 {
@@ -24,6 +27,7 @@ namespace TestDemoGym
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddDbContext<GymContext>(options => options.UseSqlServer(Configuration.GetConnectionString("LibraryConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
