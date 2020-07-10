@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace GymLibraryData.DataModels
@@ -11,5 +12,11 @@ namespace GymLibraryData.DataModels
         public int sets { get; set; }
         public int reps { get; set; }
 
+        public Exercise()
+        {
+
+        }
+
     }
+    
 }
