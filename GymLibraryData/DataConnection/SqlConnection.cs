@@ -5,41 +5,30 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Configuration;
+using System.Data;
+using Dapper;
+using System.Linq;
+using System.Data.SqlClient;
 
 namespace GymLibraryData.DataConnection
 {
-    public class SqlConnection : DataConnection
+    public class SqlConnection : DataConnection 
     {
-
-        /// <summary>
-        /// next time we gonna fill a SQL database and pull from there
-        /// </summary>
-        public static List<Exercise> output = new List<Exercise>();
-        public Exercise CreateExercise(Exercise model)
+        
+        public static Exercise GetExercise()
         {
-            Exercise p = new Exercise();
-            p.Id = 1;
-            p.ExerciseName = "Bench Press";
-            p.sets = 1;
-            p.reps = 1;
+            List<Exercise> output;
 
-            output.Add(p);
+            
+
+            Exercise p = new Exercise();
+            //output.Add(p);
             return p;
         }
-        public static Exercise getExercise()
+        public Exercise CreateExercise(Exercise model)
         {
-            Exercise p = new Exercise();
-            p.Id = 1;
-            p.ExerciseName = "Bench Press";
-            p.sets = 1;
-            p.reps = 1;
-
-            output.Add(p);
-            return p;
-            
+            throw new NotImplementedException();
         }
     }
 }
-       
-
-

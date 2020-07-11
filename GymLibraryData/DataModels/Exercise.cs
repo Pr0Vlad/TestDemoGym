@@ -12,10 +12,7 @@ namespace GymLibraryData.DataModels
         public int sets { get; set; }
         public int reps { get; set; }
 
-        public Exercise()
-        {
-
-        }
+       
 
     }
     

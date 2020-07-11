@@ -27,7 +27,8 @@ namespace TestDemoGym
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddDbContext<GymContext>(options => options.UseSqlServer(Configuration.GetConnectionString("LibraryConnection")));
+            services.AddDbContext<SqlDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SqlDbContext")));
+            services.AddScoped<ExerciseDataAccess>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,6 +55,8 @@ namespace TestDemoGym
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+
+                
             });
         }
     }

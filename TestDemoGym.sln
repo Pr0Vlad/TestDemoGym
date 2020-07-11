@@ -8,7 +8,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestDemoGym", "TestDemoGym\
 		{BD31D0A5-9065-4CE1-BE13-82BA6DA42335} = {BD31D0A5-9065-4CE1-BE13-82BA6DA42335}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymLibraryData", "GymLibraryData\GymLibraryData.csproj", "{BD31D0A5-9065-4CE1-BE13-82BA6DA42335}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GymLibraryData", "GymLibraryData\GymLibraryData.csproj", "{BD31D0A5-9065-4CE1-BE13-82BA6DA42335}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

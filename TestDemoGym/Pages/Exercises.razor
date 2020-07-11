@@ -1,0 +1,17 @@
+﻿@page "/Exercises"
+@using GymLibraryData
+@inject GymLibraryData.ExerciseDataAccess ExerciseManager
+<h3>Exercises</h3>
+
+@code {
+    GymLibraryData.DataModels.Exercise exer = new GymLibraryData.DataModels.Exercise();
+    List<GymLibraryData.DataModels.Exercise> exercises = null;
+    string Message { get; set; }
+
+    protected override void OnInitialized()
+    {
+        exercises = ExerciseManager.SelectAll();
+    }
+    
+}
+<h4>Customer Manager</h4>
