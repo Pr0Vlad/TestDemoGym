@@ -18,7 +18,9 @@ namespace GymLibraryData
         }
         public List<Exercise> SelectAll()
         {
+            
             return db.Exercises.ToList();
+            
         }
         
     }

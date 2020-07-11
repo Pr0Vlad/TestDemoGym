@@ -26,6 +26,7 @@ namespace TestDemoGym
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddServerSideBlazor();
             services.AddRazorPages();
             services.AddDbContext<SqlDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SqlDbContext")));
             services.AddScoped<ExerciseDataAccess>();
@@ -55,8 +56,8 @@ namespace TestDemoGym
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
-
-                
+                endpoints.MapBlazorHub();
+               
             });
         }
     }

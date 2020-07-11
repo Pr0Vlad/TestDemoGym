@@ -1,17 +1,28 @@
 ﻿@page "/Exercises"
 @using GymLibraryData
 @inject GymLibraryData.ExerciseDataAccess ExerciseManager
+
+
+@* getting exercises from database and listing it to test*@
 <h3>Exercises</h3>
+<ul>
+    <li>@exercises[0].ExerciseName</li>
+    <li>@exercises[0].Id</li>
+    <li>@exercises[0].sets</li>
+    <li>@exercises[0].reps</li>
+</ul>
 
 @code {
+
     GymLibraryData.DataModels.Exercise exer = new GymLibraryData.DataModels.Exercise();
     List<GymLibraryData.DataModels.Exercise> exercises = null;
     string Message { get; set; }
 
     protected override void OnInitialized()
     {
+
         exercises = ExerciseManager.SelectAll();
     }
     
 }
-<h4>Customer Manager</h4>
+
