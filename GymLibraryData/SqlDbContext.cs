@@ -17,8 +17,10 @@ namespace GymLibraryData
 
         }
         public DbSet<Exercise> Exercises { get; set; }
-       
-        
+        public DbSet<Person> people { get; set; }
+        public DbSet<Program> programs { get; set; }
+
+
     }
 }
         

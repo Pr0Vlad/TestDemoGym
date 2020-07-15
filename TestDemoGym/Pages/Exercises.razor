@@ -2,14 +2,17 @@
 @using GymLibraryData
 @inject GymLibraryData.ExerciseDataAccess ExerciseManager
 
-
 @* getting exercises from database and listing it to test*@
-<h3>Exercises</h3>
-<ul>
-    <li>@exercises[0].ExerciseName</li>
-    <li>@exercises[0].Id</li>
-    
-</ul>
+
+
+@foreach (var exer in exercises)
+{
+    <p>@exer.ExerciseName</p>
+}
+
+
+
+
 
 @code {
 
@@ -22,6 +25,6 @@
 
         exercises = ExerciseManager.SelectAll();
     }
-    
+
 }
 

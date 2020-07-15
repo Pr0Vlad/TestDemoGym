@@ -12,7 +12,7 @@ namespace GymLibraryData.DataModels
         public string Address { get; set; }
         public DateTime DOB { get; set; }
         public string Phone { get; set; }
-        public Program ProgramId { get; set; }
+        public Program Program { get; set; }
 
     }
 }
