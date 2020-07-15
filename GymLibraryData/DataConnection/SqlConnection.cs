@@ -18,7 +18,7 @@ namespace GymLibraryData.DataConnection
         
         public static Exercise GetExercise()
         {
-            List<Exercise> output;
+            //List<Exercise> output;
 
             
 
