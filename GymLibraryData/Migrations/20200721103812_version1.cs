@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace GymLibraryData.Migrations
 {
-    public partial class test_1 : Migration
+    public partial class version1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -28,8 +28,7 @@ namespace GymLibraryData.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ExerciseName = table.Column<string>(nullable: true),
-                    sets = table.Column<int>(nullable: false),
-                    reps = table.Column<int>(nullable: false),
+                    ExerciseDescription = table.Column<string>(nullable: true),
                     ProgramId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>

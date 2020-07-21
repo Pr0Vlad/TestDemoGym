@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GymLibraryData.Migrations
 {
     [DbContext(typeof(SqlDbContext))]
-    [Migration("20200715021253_test_1")]
-    partial class test_1
+    [Migration("20200721103812_version1")]
+    partial class version1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,16 +28,13 @@ namespace GymLibraryData.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("ExerciseDescription")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ExerciseName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("ProgramId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("reps")
-                        .HasColumnType("int");
-
-                    b.Property<int>("sets")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

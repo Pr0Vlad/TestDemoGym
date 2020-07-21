@@ -9,6 +9,7 @@ namespace GymLibraryData.DataModels
     {
         public int Id { get; set; }
         public string ExerciseName { get; set; }
+        public string ExerciseDescription { get; set; }
         //public int sets { get; set; }
         //public int reps { get; set; }
 

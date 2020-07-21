@@ -26,16 +26,13 @@ namespace GymLibraryData.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("ExerciseDescription")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ExerciseName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("ProgramId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("reps")
-                        .HasColumnType("int");
-
-                    b.Property<int>("sets")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
