@@ -1,7 +1,6 @@
 ﻿@page "/Exercises"
 @using GymLibraryData
 @inject GymLibraryData.ExerciseDataAccess ExerciseManager
-
 @*getting exercises from database and listing it to test*@
 
 
@@ -9,8 +8,8 @@
 {
     <div style="
     font-size:150%">@exer.ExerciseName</div>
-    <p></p>
-    <p>@exer.ExerciseDescription</p>
+    <p style="margin-top: 15px; margin-bottom: 30px">@exer.ExerciseDescription</p>
+
 }
 
 
