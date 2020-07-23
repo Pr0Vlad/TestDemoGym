@@ -1,0 +1,21 @@
+---
+insert into Exercises (ExerciseName, ExerciseDescription)
+values('Bench Press', 'One of the strength standards for upper body strenght.
+Works the pectoral muscles, deltoids, and the triceps. A great compound exercise to 
+put on size and strenght for the upper body.')
+---
+insert into Exercises (ExerciseName, ExerciseDescription)
+values('Squat', 'Considered a standard for leg strenght. Works pretty much the whole leg. Quads/hamstrings/glutes and more  , 
+getting stronger at this movement is key for overall body developement.')
+---
+insert into Exercises (ExerciseName, ExerciseDescription)
+values('Deadlift', 'A whole body compound movement, uses more muscle than any other exercise and is performed by lifting a weight,
+off the ground until knees and hips and back are straight.')
+---
+insert into Exercises (ExerciseName, ExerciseDescription)
+values('Pullup', 'An exercise which is considered one of the best for back developement in terms of strength and muscle, 
+also uses biceps.')
+---
+insert into Exercises (ExerciseName, ExerciseDescription)
+values('Shoulder Press', 'Could be performed seated, standing, dumbells or a barbell. This exercise uses the shoulders as a primary muscle,
+to move the weight straight up. Great for shoulders and overall total body power.')
