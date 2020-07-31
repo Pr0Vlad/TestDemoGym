@@ -1,0 +1,26 @@
+﻿@page "/Programs"
+@using GymLibraryData
+@inject GymLibraryData.ProgramDataAccess ProgramManager
+@*getting programs from database and listing it to test*@
+
+
+<h1>TEST</h1>
+@foreach (var pro in programs)
+{
+    <div style="
+    font-size:150%">@pro.ProgramName</div>
+    <p style="margin-top: 15px; margin-bottom: 30px">@pro.ProgramGoal</p>
+
+}
+
+@code {
+    GymLibraryData.DataModels.Program pro = new GymLibraryData.DataModels.Program();
+    List<GymLibraryData.DataModels.Program> programs = null;
+    string Message { get; set; }
+
+    protected override void OnInitialized()
+    {
+
+        programs = ProgramManager.SelectAll();
+    }
+}
