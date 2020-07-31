@@ -16,7 +16,7 @@ namespace GymLibraryData
         }
         public List<Program> SelectAll()
         {
-            return db.programs.ToList();
+            return db.Programs.ToList();
         }
     }
 }

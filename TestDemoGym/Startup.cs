@@ -30,6 +30,7 @@ namespace TestDemoGym
             services.AddRazorPages();
             services.AddDbContext<SqlDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SqlDbContext")));
             services.AddScoped<ExerciseDataAccess>();
+            services.AddScoped<ProgramDataAccess>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
