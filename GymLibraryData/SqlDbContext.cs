@@ -20,7 +20,6 @@ namespace GymLibraryData
         public DbSet<Person> people { get; set; }
         public DbSet<Program> Programs { get; set; }
 
-
     }
 }
         
