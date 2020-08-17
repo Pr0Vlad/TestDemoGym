@@ -1,14 +1,46 @@
-﻿@page
+﻿
+@page
 @model TestDemoGym.Pages.SmolovModel
 @{
     ViewData["Title"] = "Smolov";
+    if (IsPost)
+    {
+        string currentmax = Request.Form["CurrentMax"];
+
+        <text>
+            You entered:
+            <br />
+            Company Name: @currentmax
+            <br />
+
+        </text>
+    }
 }
+
 
 <h1>Smolov</h1>
 
-<br />
-<p>Enter your current MAX:</p>
-<br />
+<html>
+<body>
+    <form method="POST" action="/">
+        <fieldset>
+            <legend>Add Current Max</legend>
+            <div>
+                <label for="CurrentMax">Current Max:</label>
+                <input type="text" name="CurrentMax" value="" />
+            </div>
+            <div>
+                <label>&nbsp;</label>
+                <input type="submit" value="Submit" class="submit" />
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
+
+
+
+
 
 <table style=" width:70%">
     <tr>
@@ -801,6 +833,3 @@
 <p>Enter your New Max</p>
 <!--Need to calculate total progress-->
 <p>Total Progress in Pounds:</p>
-
-
-
