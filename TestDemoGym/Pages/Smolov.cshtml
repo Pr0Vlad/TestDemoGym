@@ -3,40 +3,34 @@
 @model TestDemoGym.Pages.SmolovModel
 @{
     ViewData["Title"] = "Smolov";
-    if (IsPost)
-    {
-        string currentmax = Request.Form["CurrentMax"];
 
-        <text>
-            You entered:
-            <br />
-            Company Name: @currentmax
-            <br />
-
-        </text>
-    }
 }
 
 
 <h1>Smolov</h1>
 
-<html>
-<body>
-    <form method="POST" action="/">
-        <fieldset>
-            <legend>Add Current Max</legend>
-            <div>
-                <label for="CurrentMax">Current Max:</label>
-                <input type="text" name="CurrentMax" value="" />
-            </div>
-            <div>
-                <label>&nbsp;</label>
-                <input type="submit" value="Submit" class="submit" />
-            </div>
-        </fieldset>
-    </form>
-</body>
-</html>
+
+    
+  
+<form method="post">
+    <fieldset>
+        <legend>Add Current Max</legend>
+        <div>
+            <label for="CurrentMax">Current Max:</label>
+            <input type="text" name="currentmax" value="" />
+        </div>
+        <div>
+            <label>&nbsp;</label>
+            <input type="submit" value="Submit" class="submit" />
+
+        </div>
+    </fieldset>
+</form>
+   
+    
+<p></p>
+
+
 
 
 
